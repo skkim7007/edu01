@@ -65,7 +65,7 @@
         
         <!-- Home View -->
         <div id="view-home" class="tab-view space-y-16 fade-in">
-            <section class="relative rounded-[3rem] overflow-hidden group shadow-2xl h-[550px]">
+            <section class="relative rounded-[3rem] overflow-hidden group shadow-2xl h-[650px] md:h-[600px]">
                 <div class="absolute inset-0 hero-gradient z-10"></div>
                 <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center transition-transform duration-[2000ms] group-hover:scale-110"></div>
                 <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-10">
@@ -73,16 +73,17 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-cyan-300"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
                         찬란한 동해의 아침을 여는 곳
                     </div>
-                    <h2 class="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none" style="text-shadow: 0 4px 20px rgba(0,0,0,0.3)">
+                    <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-none" style="text-shadow: 0 4px 20px rgba(0,0,0,0.3)">
                         <span class="opacity-90">우리 곁의</span> <br/>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-400">영원한 독도</span>
                     </h2>
-                    <p class="text-lg md:text-xl text-white/70 max-w-2xl font-medium leading-relaxed mb-10">
+                    <p class="text-base md:text-lg text-white/70 max-w-2xl font-medium leading-relaxed mb-10">
                         천혜의 자연과 유구한 역사가 깃든 대한민국 동쪽 끝,<br/>독도가 품은 진실된 이야기를 지금 시작합니다.
                     </p>
-                    <div class="flex flex-wrap justify-center gap-5">
-                        <button onclick="showTab('learn')" class="bg-white text-slate-950 px-10 py-5 rounded-[1.5rem] font-black text-lg hover:bg-cyan-50 transition-all transform hover:-translate-y-2 shadow-xl hover:shadow-white/20 active:scale-95">학습 시작하기</button>
-                        <button onclick="showTab('quiz')" class="bg-slate-950/40 backdrop-blur-xl text-white border border-white/20 px-10 py-5 rounded-[1.5rem] font-black text-lg hover:bg-slate-900 transition-all transform hover:-translate-y-2 active:scale-95">실력 퀴즈</button>
+                    <div class="flex flex-wrap justify-center gap-4 md:gap-5">
+                        <button onclick="showTab('quiz')" class="bg-white text-slate-950 px-8 py-4 rounded-[1.2rem] font-black text-base hover:bg-cyan-50 transition-all transform hover:-translate-y-1 shadow-xl active:scale-95">실력 퀴즈</button>
+                        <a href="./01/index.html" class="bg-indigo-600 text-white px-8 py-4 rounded-[1.2rem] font-black text-base hover:bg-indigo-700 transition-all transform hover:-translate-y-1 shadow-xl active:scale-95 flex items-center gap-2">독도 연표</a>
+                        <a href="./02/index.html" class="bg-emerald-600 text-white px-8 py-4 rounded-[1.2rem] font-black text-base hover:bg-emerald-700 transition-all transform hover:-translate-y-1 shadow-xl active:scale-95 flex items-center gap-2">독도 용어</a>
                     </div>
                 </div>
             </section>
@@ -146,7 +147,7 @@
                 <button onclick="showTab('home')" class="hover:text-indigo-500 transition-colors text-left">Main</button>
                 <button onclick="showTab('learn')" class="hover:text-indigo-500 transition-colors text-left">Archive</button>
                 <button onclick="showTab('quiz')" class="hover:text-indigo-500 transition-colors text-left">Challenge</button>
-                <a href="#" class="flex items-center gap-2 hover:text-indigo-500 transition-colors">Support</a>
+                <a href="#" class="flex items-center gap-2 hover:text-indigo-500 transition-colors text-left">Support</a>
             </div>
         </div>
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 py-8 border-t border-slate-100/5 dark:border-slate-900/50">
@@ -229,7 +230,7 @@
                 sunIcon.classList.add('hidden');
                 moonIcon.classList.remove('hidden');
             }
-            renderLearn(); // Re-render to apply dark mode classes if needed
+            renderLearn();
         }
 
         function showTab(tabId) {
